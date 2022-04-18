@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Login = () => {
   return (
@@ -87,7 +88,7 @@ const Login = () => {
 
             <button className='flex bg-white justify-center items-center w-[450px] h-[48px] font-semibold rounded-full text-gray-600 border border-gray-500 hover:border-black'>
               <p className='flex w-full justify-center'>
-                REGISTRARSE EN SPOTIFY
+                <NavLink to='/signup'>REGISTRARSE EN SPOTIFY</NavLink>
               </p>
             </button>
           </div>

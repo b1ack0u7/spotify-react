@@ -1,7 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { Layout } from '../pages/containers/Layout'
 import Login from '../pages/login/Login'
-import ForgotPassword from '../pages/login/ForgotPassword'
+import SignUp from '../pages/login/Signup'
 
 export const AppRouter = () => {
   return (
@@ -9,8 +10,9 @@ export const AppRouter = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/login' element={<Login/>}/>
-          <Route path='/forgot-password' element={<ForgotPassword/>}/>
+          <Route path='/signup' element={<SignUp/>}/>
 
+          <Route path='/app/*' element={<Layout/>}/>
           <Route path='/' element={<Navigate replace to='/login'/>}/>
         </Routes>
       </BrowserRouter>
